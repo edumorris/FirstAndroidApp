@@ -1,9 +1,11 @@
 package com.edumacation.firstandroid;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,5 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void toggle(View v) {
         v.setEnabled(false);
+        Button btn = (Button) v;
+
+        btn.setText("Disabled"); // Changes the text of the button to the one that is defined.
+        Log.d("Success", "Button disabled, Text changed");
     }
 }
