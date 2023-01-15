@@ -1,5 +1,6 @@
 package com.edumacation.firstandroid;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -35,5 +36,12 @@ public class MainActivity extends AppCompatActivity {
         Log.d("info", input);
 
         Toast.makeText(this, input, Toast.LENGTH_LONG).show(); // Display toast message
+    }
+
+    public void launchSettings(View v) {
+        // Launch new activity
+         Intent in = new Intent(this, SettingsActivity.class);
+
+         startActivity(in);
     }
 }
